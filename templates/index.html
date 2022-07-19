@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h1>Predict Diabetes</h1>
+    <p>Enter Your information</p>
+
+    <form action="/" method="POST">
+        <input type="number" name="glc" placeholder="Glucose">
+        <input type="number" name="bp" placeholder="BloodPressure">
+        <input type="number" name="bmi" placeholder="BMI">
+        <input type="number" name="age" placeholder="Age">
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    {% if dp == 2 %}
+    
+        <p>You dont have diabetes</p>
+
+    {% elif dp == 3 %}
+    
+        <p>You have diabetes</p>
+
+    {% else %}
+
+        <p>No Result yet</p>
+
+    {% endif %}
+
+</body>
+</html>
